@@ -101,23 +101,23 @@ const productsSortedByType = separateByType(productsArray);
 
 function paintingsItems(paintingsArray) {
   for (let i = 0; i < paintingsArray.length; i++) {
-    const li = document.createElement('li')
-    const ul = document.getElementById('paintingsList')
-    ul.appendChild(li)
+    const listItems = document.createElement('li')
+    const list = document.getElementById('paintingsList')
+    list.appendChild(listItems)
 
 
     const img = document.createElement('img')
     img.src = paintingsArray[i].image
-    li.appendChild(img)
+    listItems.appendChild(img)
 
 
-    const h3 = document.createElement('h3')
-    h3.innerText = `${paintingsArray[i].name}`
-    li.appendChild(h3)
+    const itemTitle = document.createElement('h3')
+    itemTitle.innerText = `${paintingsArray[i].name}`
+    listItems.appendChild(itemTitle)
 
-    const p = document.createElement('p')
-    p.innerText = `${paintingsArray[i].price}`
-    li.appendChild(p)
+    const priceItem = document.createElement('p')
+    priceItem.innerText = `${paintingsArray[i].price}`
+    listItems.appendChild(priceItem)
   }
 }
 
@@ -126,21 +126,21 @@ paintingsItems(paintingsArray)
 
 function actionFiguresItems(actionFiguresArray) {
   for (let i = 0; i < actionFiguresArray.length; i++) {
-    const li = document.createElement('li')
-    const ul = document.getElementById('actionFiguresList')
-    ul.appendChild(li)
+    const listItems = document.createElement('li')
+    const list = document.getElementById('actionFiguresList')
+    list.appendChild(listItems)
 
-    const img = document.createElement('img')
-    img.src = actionFiguresArray[i].image
-    li.appendChild(img)
+    const imgItem = document.createElement('img')
+    imgItem.src = actionFiguresArray[i].image
+    listItems.appendChild(imgItem)
 
-    const h3 = document.createElement('h3')
-    h3.innerText = `${actionFiguresArray[i].name}`
-    li.appendChild(h3)
+    const itemTitle = document.createElement('h3')
+    itemTitle.innerText = `${actionFiguresArray[i].name}`
+    listItems.appendChild(itemTitle)
 
-    const p = document.createElement('p')
-    p.innerText = `${actionFiguresArray[i].price}`
-    li.appendChild(p)
+    const itemPrice = document.createElement('p')
+    itemPrice.innerText = `${actionFiguresArray[i].price}`
+    listItems.appendChild(itemPrice)
   }
 }
 actionFiguresItems(actionFiguresArray)
